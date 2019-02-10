@@ -1,5 +1,10 @@
 === WooCommerce Zapier Integration Changelog ===
 
+2019.02.08 - version 1.8.1
+* Full details: https://wczap.com/?p=1047
+* New: Compatibility with WooCommerce Subscriptions v2.5.0 (and backwards compatible with WooCommerce Subscriptions v2.3.x). #144
+* Fix: Improve support of older WooCommerce versions < 3.3.0 combined with specific newer WordPress versions. #145
+
 2019.02.04 - version 1.8.0
 * Full details: https://wczap.com/?p=1034
 * Change: When setting up Customer, Order or Subscription Zaps, send real Customer/Order/Subscription data from your store (rather than static data). This should make setting up Zaps much easier, as the Zap editor will show real fields and data from your store. #105

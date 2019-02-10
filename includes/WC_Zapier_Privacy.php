@@ -2,7 +2,9 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-if ( class_exists( 'WC_Abstract_Privacy' ) ) {
+if ( ! class_exists( 'WC_Abstract_Privacy' ) ) {
+	class WC_Zapier_Privacy {}
+} else {
 	// WC 3.4+ only
 
 	/**

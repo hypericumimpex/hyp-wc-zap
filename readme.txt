@@ -5,7 +5,7 @@ Donate link: https://om4.com.au/wordpress-plugins/#donate
 Tags: woocommerce, zapier, webhook, integration, automation
 Requires at least: 4.6
 Tested up to: 5.0.3
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 WC requires at least: 3.0.0
