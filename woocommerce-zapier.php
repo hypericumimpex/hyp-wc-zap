@@ -3,13 +3,13 @@
 Plugin Name: HYP WC Zapier Integration
 Plugin URI: https://github.com/hypericumimpex/hyp-wc-zap/
 Description: Integrates WooCommerce with the <a href="https://www.zapier.com" target="_blank">Zapier</a> web automation service.
-Version: 1.8.1
+Version: 1.8.2
 Author: OM4
 Author URI: https://github.com/hypericumimpex/
 Text Domain: wc_zapier
 Woo: 243589:0782bdbe932c00f4978850268c6cfe40
 WC requires at least: 3.0.0
-WC tested up to: 3.5.4
+WC tested up to: 3.5.6
 */
 
 /*
@@ -328,12 +328,12 @@ if ( is_woocommerce_active() ) {
 			/**
 			 * Return a formatted price (excluding currency symbols).
 			 *
-			 * @param int|float|double $price The unformatted price.
+			 * @param int|float|double $price The unformatted price (without any thousands separators)
 			 *
-			 * @return string the formatted price (2 decimal places)
+			 * @return string the formatted price (with the number of decimal places matching WooCommerce's "General -> Currency options -> Number of decimals" setting)
 			 */
 			public static function format_price( $price ) {
-				return wc_format_decimal ( $price, 2 );
+				return wc_format_decimal ( $price, wc_get_price_decimals() );
 			}
 
 			/**

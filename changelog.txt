@@ -1,5 +1,11 @@
 === WooCommerce Zapier Integration Changelog ===
 
+2019.03.08 - version 1.8.2
+* Full details: https://wczap.com/?p=1050
+* Fix: Sending of Order sample data for stores with refunded orders. #159
+* Change: Prices and Totals are sent using WooCommerce's "General -> Currency options -> Number of decimals" setting instead of always with two decimal places. #158
+* Marked as compatible with WooCommerce 3.5.6.
+
 2019.02.08 - version 1.8.1
 * Full details: https://wczap.com/?p=1047
 * New: Compatibility with WooCommerce Subscriptions v2.5.0 (and backwards compatible with WooCommerce Subscriptions v2.3.x). #144
@@ -9,7 +15,7 @@
 * Full details: https://wczap.com/?p=1034
 * Change: When setting up Customer, Order or Subscription Zaps, send real Customer/Order/Subscription data from your store (rather than static data). This should make setting up Zaps much easier, as the Zap editor will show real fields and data from your store. #105
 * Change: Remove remaining support for WooCommerce 2.6.x. WooCommerce 3.0 or above is required. #132
-* Change: The "Subscription Created" trigger now tiggers for all cases (not just checkout and REST API subscription creations). #132
+* Change: The "Subscription Created" trigger now triggers for all cases (not just checkout and REST API subscription creations). #132
 * Change: Requires WordPress v4.6.0 or newer (no longer supports WordPress v4.5.x). #140
 * Change: Requires WooCommerce Subscriptions v2.3.0 or newer (no longer supports WooCommerce Subscriptions v2.2.x or 2.1.x). #136
 

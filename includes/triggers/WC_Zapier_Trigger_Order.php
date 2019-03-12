@@ -145,6 +145,7 @@ abstract class WC_Zapier_Trigger_Order extends WC_Zapier_Trigger {
 			// Send the store's most recent order, or if that doesn't exist then send the static hard-coded sample order data
 
 			$orders  = wc_get_orders( array(
+				'type'    => 'shop_order',
 				'limit'   => 1,
 				'orderby' => 'date',
 				'order'   => 'DESC',
@@ -338,10 +339,10 @@ abstract class WC_Zapier_Trigger_Order extends WC_Zapier_Trigger {
 
 			// Line Item Data.
 			$line_item->unit_price        = WC_Zapier::format_price( $this->wc_order->get_item_total( $line_item_data, false, true ) );
-			$line_item->line_subtotal     = WC_Zapier::format_price( $line_item_data->get_subtotal() );
-			$line_item->line_total        = WC_Zapier::format_price( $line_item_data->get_total() );
-			$line_item->line_tax          = WC_Zapier::format_price( $line_item_data->get_total_tax() );
-			$line_item->line_subtotal_tax = WC_Zapier::format_price( $line_item_data->get_subtotal_tax() );
+			$line_item->line_subtotal     = WC_Zapier::format_price( $line_item_data->get_subtotal() ); // Line subtotal (before discounts)
+			$line_item->line_total        = WC_Zapier::format_price( $line_item_data->get_total() ); // Line total (after discounts)
+			$line_item->line_tax          = WC_Zapier::format_price( $line_item_data->get_total_tax() ); // Line total tax (after discounts)
+			$line_item->line_subtotal_tax = WC_Zapier::format_price( $line_item_data->get_subtotal_tax() ); // Line subtotal tax (before discounts)
 			$line_item->tax_class         = $line_item_data->get_tax_class();
 
 			// Downloadable files
