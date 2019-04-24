@@ -9,7 +9,7 @@ Stable tag: 1.8.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 WC requires at least: 3.0.0
-WC tested up to: 3.5.6
+WC tested up to: 3.6.0
 
 == Description ==
 

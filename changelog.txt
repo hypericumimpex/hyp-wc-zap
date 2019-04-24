@@ -1,5 +1,9 @@
 === WooCommerce Zapier Integration Changelog ===
 
+2019.04.17 - version 1.8.3
+* Full details: https://wczap.com/?p=1078
+* Marked as compatible with WooCommerce 3.6.0.
+
 2019.03.08 - version 1.8.2
 * Full details: https://wczap.com/?p=1050
 * Fix: Sending of Order sample data for stores with refunded orders. #159

@@ -3,13 +3,13 @@
 Plugin Name: HYP WC Zapier Integration
 Plugin URI: https://github.com/hypericumimpex/hyp-wc-zap/
 Description: Integrates WooCommerce with the <a href="https://www.zapier.com" target="_blank">Zapier</a> web automation service.
-Version: 1.8.2
+Version: 1.8.3
 Author: OM4
 Author URI: https://github.com/hypericumimpex/
 Text Domain: wc_zapier
 Woo: 243589:0782bdbe932c00f4978850268c6cfe40
 WC requires at least: 3.0.0
-WC tested up to: 3.5.6
+WC tested up to: 3.6.0
 */
 
 /*
