@@ -1,5 +1,51 @@
 === WooCommerce Zapier Integration Changelog ===
 
+2019.05.10 - version 1.9.3
+* Full details: https://wczap.com/?p=1125
+* Fix: Date fields show current date/time instead of being empty #143
+* Fix: Better compatibility with the Measurement Price Calculator extension. #188
+* Fix: Improve Order shipping information collection logic which can cause a fatal error. #190
+* Change: Clarifying in the documentation that `tax_total` field excludes shipping tax.
+* Change: Support WooCommerce Subscriptions 2.5. #144
+
+2019.05.07 - version 1.9.2
+* Full details: https://wczap.com/?p=1117
+* Fix: Avoid a PHP Fatal error in hosting environments that have PHP opcode caching enabled with opcache.save_comments=0, which was causing reflection to fail. #184
+* Fix: Use JSON file for sample data instead of Reflection. #184
+* Fix: Do not use Reflection for validation. #184
+* Change: Remove temporary hotfix that was implemented in v1.9.1. #184
+
+2019.05.03 - version 1.9.1
+* Full details: https://wczap.com/?p=1113
+* Fix: Implement a hotfix for uncommon web hosting environments that have opcode caching enabled with opcache.save_comments=0 #184.
+
+2019.05.02 - version 1.9.0
+* Full details: https://wczap.com/?p=1058
+* New: Improved [line item support in Zapier](https://wczap.com/?p=1062). #90
+* New: Added link to logging in the plugin page. #119
+* New: Notice for administrators if PHP version is not supported. #164
+       If the plugin installed in a PHP 5.2 - 5.3 environment, it won't work, only displaying a message.
+* Fix: Updated sample data in the extension and the Zapier site to better represent real data. #151
+* Fix: When WooCommerce Checkout Field Editor is installed, avoid a PHP notice. #164
+* Change: Use WooCommerce for logging. #90
+* Change: Ensure SSL certificate verification occurs when sending data to Zapier. #168
+* Change: Minimum required PHP version is now 5.4. No longer supporting PHP 5.2.x and 5.3.x. #154
+* Change: Introduce namespaces and class autoloader. #150 #161
+          Deprecated all existing class names and replace them with new namespaced classes. #161
+* Change: Filter parameters are changed: #161
+    * In `wc_zapier_data` filter the second parameter is now of type `OM4\Zapier\Trigger\Base` (was `WC_Zapier_Trigger`).
+    * In `wc_zapier_data_***` filter the second parameter is now of type `OM4\Zapier\Trigger\Base` (was `WC_Zapier_Trigger`).
+    * In `wc_zapier_data_json` filter the second parameter is now of type `OM4\Zapier\Trigger\Base` (was `WC_Zapier_Trigger`).
+    * In `wc_zapier_data_json_***` filter the second parameter is now of type `OM4\Zapier\Trigger\Base` (was `WC_Zapier_Trigger`).
+    * In `wc_zapier_scheduled_event` hook the third parameter is now of type `OM4\Zapier\Trigger\Base` (was `WC_Zapier_Trigger`).
+    * In `wc_zapier_send_asynchronously` filter the second parameter is now of type `OM4\Zapier\Trigger\Base` (was `WC_Zapier_Trigger`).
+* Change: Using a new rigid structure for payloads. #50 #149 #151 #152
+* Change: Notice for administrators if WooCommerce not installed. #161
+          If the plugin installed without WooCommerce, now displaying a message.
+* Change: Removed `woothemes_queue_update` and legacy woo* files. Updates are now handled by WooCommerce core. #161
+* Change: Simplified WooCommerce check. #161
+* Change: Remove redundant admin CSS. #155
+
 2019.04.17 - version 1.8.3
 * Full details: https://wczap.com/?p=1078
 * Marked as compatible with WooCommerce 3.6.0.
